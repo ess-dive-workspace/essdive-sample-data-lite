@@ -2,13 +2,49 @@
 Below we list the controlled vocabularies for applicable terms that can be found in ESS-DIVE's Sample Data Lite reporting format templates.
 
 Controlled vocabularies are available for the following terms:
+- Sample Data Lite File
+     - [material](#material)
+     - [vertical_position_reference](#vertical_position_reference)
 - Data Dictionary File
      - [unit](#unit)
-     - [representation_temporal](#representation-temporal)
+     - [representation_temporal](#representation_temporal)
      - [statistic](#statistic)
-     - [measured_variable](#measured-variable)
-     - [data_type](#data-type)
+     - [measured_variable](#measured_variable)
+     - [data_type](#data_type)
 
+---
+## Sample Data Lite File
+### material
+|Controlled Vocabulary|
+|:-----------------------------------------------------------------|
+|Gas|
+|Ice|
+|Liquid>aqueous|
+|Liquid>organic|
+|Mineral|
+|NotApplicable|
+|Organic Material|
+|Other|
+|Particulate|
+|Plant Structure|
+|Rock|
+|Sediment|
+|Soil|
+|Synthetic|
+|Tephra|
+
+### vertical_position_reference
+|Controlled Vocabulary|Definition|
+|:----------------------------------------------------|:----------------------------------------------------|
+| ground_surface | local ground surface |
+| well_casing_top | top of a well casing |
+| water_bed | bed or bottom of a water body (e.g., lake, river, stream) |
+| water_surface | surface of a water body (e.g., lake, river, stream) |
+| mean_sea_level | mean sea level |
+| unknown | The vertical position reference is unknown. |
+| other | The vertical position reference is known, but not in the predefined list. Provide the known vertical position reference in the notes field. |
+
+---
 ## Data Dictionary File
 ### unit
 The controlled vocabulary for the unit is based on the [Unified Code of Unified Measurements (UCUM)](https://ucum.org/ucum).
