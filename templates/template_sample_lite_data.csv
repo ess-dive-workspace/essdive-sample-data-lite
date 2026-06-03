@@ -1,0 +1,1 @@
+material,datetime_collected,{measurement_column_name},latitude,longitude,location_description,time_elapsed,sample_name,vertical_position,vertical_position_reference,treatment_id,datetime_measured,{measurement_column_name}_flag,notes
