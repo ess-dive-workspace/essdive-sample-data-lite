@@ -1,4 +1,4 @@
-### Sample Data - Lite Reporting Format Templates
+# Templates
 
 - [Data File Template](/templates/template_sample_lite_data.csv)
 - [File Level Metadata File Template](/templates/template_sample_lite_flmd.csv)
