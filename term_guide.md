@@ -1,6 +1,8 @@
-## Term Guide
+# Term Guide
 
-The  Sample Data - Lite Reporting Format terms are defined below, including  whether that term is required, conditionally required, or optional, a brief definition, formatting requirements, an example, and additional guidance. A single asterisk (*) below marks fields that are required. Two asterisks (**) mark fields that are conditionally required.
+The Sample Data - Lite Reporting Format terms are defined below, including whether that term is required, conditionally required, or optional, a brief definition, formatting requirements, an example, and additional guidance.
+
+A single asterisk (*) below marks terms that are required. Two asterisks (**) mark fields that are conditionally required.
 
 ### Terms of the reporting format:
 [**Sample Data File**](#sample-data-file)
@@ -10,7 +12,7 @@ The  Sample Data - Lite Reporting Format terms are defined below, including  whe
 - [latitude](#latitude)**
 - [longitude](#longitude)**
 - [location_description](#location_description)**
-- [time_elapsed](#time_elapsed)
+- [time_elapsed](#time_elapsed)**
 - [sample_name](#sample_name)
 - [vertical_position](#vertical_position)
 - [vertical_position_reference](#vertical_position_reference)
@@ -51,7 +53,7 @@ The  Sample Data - Lite Reporting Format terms are defined below, including  whe
 |term|`material`|
 |:----------------------------------------------------|:----------------------------------------------------|
 |requirement|required|
-|format|Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#material)|
+|format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#material)|
 |unit|N/A|
 |definition|Material / medium being measured.|
 |example|Liquid>aqueous|
@@ -105,14 +107,14 @@ The  Sample Data - Lite Reporting Format terms are defined below, including  whe
 |unit|N/A|
 |definition|Text description of a location. Details could include physical environment, sampling infrastructure, ecosystem type, and habitat.|
 |example|Sediment along eastern shoreline of the Columbia River, Richland, WA, USA|
-|additional guidance|`Latitude` and `longitude` is strongly recommended rather than using only the `location_description` field.|
+|additional guidance|`latitude` and `longitude` is strongly recommended rather than using only the `location_description` field.|
 
 ### time_elapsed
 |term|`time_elapsed`|
 |:----------------------------------------------------|:----------------------------------------------------|
 |requirement|Required conditionally for time series measurements on a single sample|
 |format|numeric|
-|unit|seconds|
+|unit|second|
 |definition|Cumulative time elapsed, to known specificity, between the first measurement and the current measurement, on a single sample.|
 |example|30|
 |additional guidance|Used to indicate the passage of time when taking multiple measurements through time on a single sample.|
@@ -304,7 +306,7 @@ The  Sample Data - Lite Reporting Format terms are defined below, including  whe
 |unit|N/A|
 |definition|A description of the column/row header.|
 |example|Soil temperature replicate 2 at location loc_25d|
-|additional guidance|Definitions for reporting format terms must be used as is from the provided data dictionary template. For user-defined `{measurement_column_name}`, the measurement characteristics must be defined in the required fields that include measured_variable and unit. Optional fields, such as statistic, temporal representation, and unit basis, should be used to fully describe the measurement characteristics. The measurement characteristics can be repeated in the definition; however downstream resources will primarily utilize the other specific data dictionary fields.|
+|additional guidance|Definitions for reporting format terms must be used as is from the provided data dictionary template. For user-defined `{measurement_column_name}`, the measurement characteristics must be defined in the required fields that include `measured_variable` and `unit`. Optional fields, such as `statistic_*`, `representation_temporal`, and `unit_basis`, should be used to fully describe the measurement characteristics. The measurement characteristics can be repeated in the definition; however downstream resources will primarily utilize the other specific data dictionary fields.|
 
 ### measured_variable
 |term|`measured_variable`|
