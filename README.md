@@ -1,7 +1,7 @@
-# ESS-DIVE Reporting Format for Sample Data Lite v 1.0.0
+# ESS-DIVE Reporting Format for Sample Data - Lite v1.0.0
 
 ## About the reporting format
-This reporting format is intended for laboratory-generated sample data. This can include a set of individual samples or a time series of measurements on a single sample. This **Lite** version provides guidance on file structure and contents for data and metadata. It includes a term guide, templates, examples, and several controlled vocabularies.
+The Sample Data - Lite reporting format is intended for data generated in a laboratory from physical samples. This can include a set of individual samples or a time series of measurements on a single sample. The Lite version provides guidance on file structure and contents for data and metadata. It includes a term guide, templates, examples, and several controlled vocabularies.
 
 ## Quickstart Guide
   1. **Read** [instructions](instructions.md) to understand how to fill out the template.
