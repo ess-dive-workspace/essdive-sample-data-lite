@@ -1,19 +1,21 @@
-# Controlled Vocabulary for Sample Data Lite Reporting Format
+# Controlled Vocabulary for Sample Data - Lite Reporting Format
 Below we list the controlled vocabularies for applicable terms that can be found in ESS-DIVE's Sample Data Lite reporting format templates.
 
-Controlled vocabularies are available for the following terms:
-- Sample Data Lite File
-     - [material](#material)
-     - [vertical_position_reference](#vertical_position_reference)
-- Data Dictionary File
-     - [unit](#unit)
-     - [representation_temporal](#representation_temporal)
-     - [statistic](#statistic)
-     - [measured_variable](#measured_variable)
-     - [data_type](#data_type)
+### Controlled vocabularies are available for the following terms:
+
+[Data File](#data-file)
+- [material](#material)
+- [vertical_position_reference](#vertical_position_reference)
+
+[Data Dictionary File](#data-dictionary-file)
+- [unit](#unit)
+- [representation_temporal](#representation_temporal)
+- [statistic](#statistic)
+- [measured_variable](#measured_variable)
+- [data_type](#data_type)
 
 ---
-## Sample Data Lite File
+## Data File
 ### material
 |Controlled Vocabulary|
 |:-----------------------------------------------------------------|
@@ -97,7 +99,7 @@ The controlled vocabulary for the unit is based on the [Unified Code of Unified 
 | total | Sum or cumulative amount measured during the sampling period |
 | standard deviation | ISO 3534:2006-1 standard deviation: positive square root of the variance; or sample standard deviation: non-negative square root of the sample variance |
 | standard error | ISO 3534:2006-1 standard error: standard deviation of an estimator. An estimator of the standard error is the sample standard deviation divided by the square root of the number of samples. |
-| measurement uncertainty | JCGM 200:2012, 3rd edition https://jcg m.bipm.org/vim/en/2.26.html measurement uncertainty: non-negative parameter characterizing the dispersion of the quantity values being attributed to a measured (`measured_variable`), based on the information used |
+| measurement uncertainty | [JCGM 200:2012, 3rd edition](https://jcg m.bipm.org/vim/en/2.26.html) measurement uncertainty: non-negative parameter characterizing the dispersion of the quantity values being attributed to a measured (`measured_variable`), based on the information used |
 | R2 | Coefficient of determination |
 | RMSE | Root mean square error |
 | p-value | ISO 3534:2006-1 p-value: probability of observing the observed test statistic value or any other value at least as unfavourable to the null hypothesis |
@@ -105,7 +107,7 @@ The controlled vocabulary for the unit is based on the [Unified Code of Unified 
 | covariance | ISO 3534:2006-1 sample covariance: sum of products of deviations of pairs of random variables in a random sample from their sample means divided by the number of terms in the sum minus one |
 
 ### measured_variable
-Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) for the `measured_variable` field. CHUASHI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
+Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) "Term" column for the `measured_variable` field. CHUASHI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
 
 ### data_type
 |Controlled Vocabulary|
