@@ -1,15 +1,15 @@
 ## Term Guide
 
-The  Sample Data - Lite Reporting Format terms are defined below, including  whether that term is required, conditionally required, or optional, a brief definition, formatting requirements, an example, and additional guidance. A single asterisk (*) below marks fields that are required.
+The  Sample Data - Lite Reporting Format terms are defined below, including  whether that term is required, conditionally required, or optional, a brief definition, formatting requirements, an example, and additional guidance. A single asterisk (*) below marks fields that are required. Two asterisks (**) mark fields that are conditionally required.
 
 ### Terms of the reporting format:
 [**Sample Data File**](#sample-data-file)
 - [material](#material)*
 - [datetime_collected](#datetime_collected)*
 - [{measurement_column_name}](#measurement_column_name)*
-- [latitude](#latitude)*
-- [longitude](#longitude)*
-- [location_description](#location_description)*
+- [latitude](#latitude)**
+- [longitude](#longitude)**
+- [location_description](#location_description)**
 - [time_elapsed](#time_elapsed)
 - [sample_name](#sample_name)
 - [vertical_position](#vertical_position)
