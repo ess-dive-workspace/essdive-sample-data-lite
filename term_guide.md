@@ -137,7 +137,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |unit|meter|
 |definition|Height / altitude (positive numbers) or depth (negative numbers) in reference to the ground surface, unless a different reference is specified in the `vertical_reference_position` field. One vertical position is allowed for each location.|
 |example|-0.25|
-|additional guidance|Sample names must be unique within the dataset and ideally are unique across a project.|
+|additional guidance|N/A|
 
 ### vertical_position_reference
 |term|`vertical_position_reference`|
