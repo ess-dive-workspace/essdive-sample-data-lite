@@ -90,7 +90,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |additional guidance|The numeric precision should reflect actual spatial precision of the measurement; this typically means having 3-5 significant digits if latitude is based on GPS. <br><br> The location will be considered a point at the reported latitude and longitude.|
 
 ### longitude
-|term|`longitute`|
+|term|`longitude`|
 |:----------------------------------------------------|:----------------------------------------------------|
 |requirement|Required conditionally: either `latitude` and `longitude` or `location_description` must be used|
 |format|numeric; range (-180, 180)|
@@ -145,9 +145,9 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#vertical_position_reference)|
 |unit|N/A|
-|definition|Reference for the vertical_position. If vertical_position is not provided in reference to the ground surface, a vertical_position_reference must be specified.|
+|definition|Reference for the `vertical_position`. If `vertical_position` is not provided in reference to the ground surface, a `vertical_position_reference` must be specified.|
 |example|water_bed|
-|additional guidance|If your vertical position reference is not in the controlled vocabulary, choose `other` and provide the vertical position reference in the notes field.|
+|additional guidance|If your vertical position reference is not in the controlled vocabulary, choose "other" and provide the `vertical_position_reference` in the notes field.|
 
 ### treatment_id
 |term|`treatment_id`|
@@ -354,7 +354,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|free text|
 |unit|N/A|
-|definition|Basis for how the measurement values are quantified (e.g., “as nitrate” vs. “as nitrogen”; “per kg dry sediment”). Provide if relevant.|
+|definition|Basis for how the measurement values are quantified (e.g., “as nitrate” vs. “as nitrogen”; “per kg dry sediment”; “relative to Vienna Pee Dee Belemnite”). Provide if relevant.|
 |example|as carbon|
 |additional guidance|This information is important for the correct interpretation of the measurement value.|
 
@@ -364,7 +364,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#statistic)|
 |unit|N/A|
-|definition|Statistic description, if applicable. This term is only used for {measurement_column_name} headers / rows if the measured value represents repeated observations of the same scientifically-equivalent spatial location and/or temporal period (e.g., replicates), or for general uncertainty in the measurement itself.|
+|definition|Statistic description, if applicable. This term is only used for `{measurement_column_name}` headers / rows if the measured value represents repeated observations of the same scientifically-equivalent spatial location and/or temporal period (e.g., replicates), or for general uncertainty in the measurement itself.|
 |example|mean|
 |additional guidance|A measurement statistic typically describes variation or uncertainty in the measurement. This can be obtained / reported by an instrument or calculated via replicates. Replicates include multiple measures on the same physical sample and/or samples collected at different locations and times that are not indistinguishable for the scientific purpose. Use the spatial and / or temporal statistical descriptions, if the variability is due to multiple scientifically important locations or time periods.|
 
@@ -374,7 +374,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#statistic)|
 |unit|N/A|
-|definition|Statistical description, if applicable. This term is only used for {measurement_column_name} headers / rows if the measured value represents a combination of individual observations from separate locations to represent a larger location.|
+|definition|Statistical description, if applicable. This term is only used for `{measurement_column_name}` headers / rows if the measured value represents a combination of individual observations from separate locations to represent a larger location.|
 |example|mean|
 |additional guidance|The spatial statistic should be used to describe measurement values that are a combination of separate spatial locations.|
 
@@ -384,7 +384,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#statistic)|
 |unit|N/A|
-|definition|Statistic description, if applicable. This term is only used for {measurement_column_name} headers / rows if the measured value represents a combination of individual observations at different times to represent a larger time period. In most cases, a corresponding representation_temporal should be specified.|
+|definition|Statistic description, if applicable. This term is only used for `{measurement_column_name}` headers / rows if the measured value represents a combination of individual observations at different times to represent a larger time period. In most cases, a corresponding representation_temporal should be specified.|
 |example|mean|
 |additional guidance|The temporal statistic should be used when the measurement value is a combination of individual measurements made at separate times.|
 
@@ -394,7 +394,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|optional|
 |format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#representation_temporal)|
 |unit|N/A|
-|definition|Temporal representativeness of the measurement, if applicable. This field is only used for data dictionary rows where the column_or_row_name entry is a measured variable. In many cases, a corresponding statistic_temporal should be specified. The temporal representation will be considered instantaneous if no value is provided and datetime_measured is reported (instead of datetime_measured_start and datetime_measured_end).|
+|definition|Temporal representativeness of the measurement, if applicable. This field is only used for data dictionary rows where the `column_or_row_name` entry is a measured variable. In many cases, a corresponding `statistic_temporal` should be specified. The temporal representation will be considered instantaneous if no value is provided and `datetime_measured` is reported (instead of `datetime_measured_start` and `datetime_measured_end`).|
 |example|month|
 |additional guidance|The temporal representation should be used when the measurement value is not an instantaneous observation and/or represents a non-instantaneous time period. <br><br> If `datetime_measured_start` and `datetime_measured_end` are reported and a temporal representation is applicable, the temporal representation should match the temporal difference.|
 
