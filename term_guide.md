@@ -1,6 +1,6 @@
 # Term Guide
 
-The Sample Data - Lite Reporting Format terms are defined below, including whether that term is required, conditionally required, or optional, a brief definition, formatting requirements, an example, and additional guidance.
+The Sample Data - Lite Reporting Format terms are defined below, including whether that term is required, a brief definition, formatting requirements, an example, and additional guidance.
 
 A single asterisk (*) below marks terms that are required. Two asterisks (**) mark fields that are conditionally required.
 
