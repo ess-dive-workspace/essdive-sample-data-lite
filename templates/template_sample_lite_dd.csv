@@ -1,0 +1,14 @@
+column_or_row_name,unit,definition,measured_variable,material_measured,column_or_row_long_name,data_type,missing_value_code,unit_basis,statistic_measurement,statistic_measurement_number,statistic_spatial,statistic_spatial_number,statistic_temporal,statistic_temporal_number,statistic_detail,representation_temporal,notes
+material,N/A,Material / medium being measured.,N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+datetime_collected,N/A,"Date and time of sample collection from the field, to known specificity.",N/A,N/A,N/A,datetime,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+latitude,degree,"Latitude of the location, in decimal degree and in decimal degree and in a coordinate reference system with WGS84 datum. Provide latitude in +/- notation, rather than North/South notation.",N/A,N/A,N/A,numeric,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+longitude,degree,"Longitude of the location, in decimal degree and in a coordinate reference system with WGS84 datum. Provide longitude in +/- notation, rather than East/West notation.",N/A,N/A,N/A,numeric,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+location_description,N/A,"Text description of a location. Details could include physical environment, sampling infrastructure, ecosystem type, and habitat.",N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+time_elapsed,second,"Cumulative time elapsed, to known specificity, between the first measurement and the current measurement, on a single sample.",N/A,N/A,N/A,numeric,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+sample_name,N/A,"Collector's project-specific sample name, which must be unique for each sample within the dataset that you are submitting.",N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+vertical_position,meter,"Height / altitude (positive numbers) or depth (negative numbers) in reference to the ground surface, unless a different reference is specified in the vertical_reference_position field. One vertical position is allowed for each location.",N/A,N/A,N/A,numeric,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+vertical_position_reference,N/A,"Reference for the vertical_position. If vertical_position is not provided in reference to the ground surface, a vertical_position_reference must be specified.",N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+datetime_measured,N/A,"Date and time of measurement, to known specificity.",N/A,N/A,N/A,datetime,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+notes,N/A,Free text notes field.,N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+common_flag,N/A,User-defined identifier that indicates a flag for the entire row of data. ,N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+{measurement_column_name}_flag,N/A,User-defined identifier that indicates a flag for the individual measurement in the corresponding measurement_column_name.,N/A,N/A,N/A,text,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
