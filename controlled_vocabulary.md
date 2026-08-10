@@ -76,7 +76,7 @@ The controlled vocabulary for the unit is based on the [Unified Code of Unified 
 |feet (international)|[ft_i]|
 
 ### measured_variable
-Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) "Term" column for the `measured_variable` field. CHUASHI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
+Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) "Term" column for the `measured_variable` field. CUAHSI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
 
 ### material_measured
 |Controlled Vocabulary|Definition|
