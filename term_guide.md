@@ -2,13 +2,16 @@
 
 The Sample Data - Lite Reporting Format terms are defined below, including whether that term is required, a brief definition, formatting requirements, an example, and additional guidance.
 
+If a user includes terms that are not governed by this RF in their files (i.e., user-defined metadata columns), those terms will NOT be parsed in ESS-DIVE’s internal tools or independently verified during schematization. The information may be included in the data schema as an unidentified piece of metadata.
+
 A single asterisk (*) below marks terms that are required. Two asterisks (**) mark fields that are conditionally required.
 
 ### Terms of the reporting format:
 [**Sample Data File**](#sample-data-file)
-- [material](#material)*
+- [material_collected](#material_collected)*
 - [datetime_collected](#datetime_collected)*
 - [{measurement_column_name}](#measurement_column_name)*
+- [{measurement_column_name}_flag](#measurement_column_name_flag)
 - [latitude](#latitude)**
 - [longitude](#longitude)**
 - [location_description](#location_description)**
@@ -18,7 +21,6 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 - [vertical_position_reference](#vertical_position_reference)
 - [treatment_id](#treatment_id)
 - [datetime_measured](#datetime_measured)
-- [{measurement_column_name}_flag](#measurement_column_name_flag)
 - [notes](#notes)
  
 [**File Level Metadata File**](#file-level-metadata-file)
@@ -37,27 +39,32 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 - [unit](#unit)*
 - [definition](#definition)*
 - [measured_variable](#measured_variable)*
+- [material_measured](#material_measured)
 - [column_or_row_long_name](#column_or_row_long_name)
 - [data_type](#data_type)
 - [missing_value_code](#missing_value_code)
 - [unit_basis](#unit_basis)
 - [statistic_measurement](#statistic_measurement)
+- [statistic_measurement_number](#statistic_measurement_number)
 - [statistic_spatial](#statistic_spatial)
+- [statistic_spatial_number](#statistic_spatial_number)
 - [statistic_temporal](#statistic_temporal)
+- [statistic_temporal_number](#statistic_temporal_number)
+- [statistic_detail](#statistic_detail)
 - [representation_temporal](#representation_temporal)
 - [notes](#notes-2)
 
 ---
 ## Sample Data File
-### material
-|term|`material`|
+### material_collected
+|term|`material_collected`|
 |:----------------------------------------------------|:----------------------------------------------------|
 |requirement|required|
-|format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#material)|
+|format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#material_collected)|
 |unit|N/A|
-|definition|Material / medium being measured.|
-|example|Liquid>aqueous|
-|additional guidance|Material / medium of the sample.|
+|definition|Material of the entity being observed (e.g., the material of the sample collected from the field).|
+|example|soil|
+|additional guidance|N/A|
 
 ### datetime_collected
 |term|`datetime_collected`|
@@ -65,7 +72,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |requirement|required|
 |format|datetime, ISO 8601:2019|
 |unit|N/A|
-|definition|Date and time of sample collection, to known specificity. |
+|definition|Date and time of sample collection from the entity being observed (e.g., from the field), to known specificity.|
 |example|2026-03-11T13:00-06:00 |
 |additional guidance|Dates must be reported in the ISO 8601:2019 standard (YYYY-MM-DD) and completed to known precision (e.g. YYYY-MM, YYYY). Times must be reported with a date in either Coordinated Universal Time (UTC) (YYYY-MM-DDThh:mm:ssZ) or Local Standard Time with the UTC offset (YYYY-MM-DDThh:mm±hh:mm). It is strongly recommended not to change UTC offset in the middle of a time series (i.e., do not switch from Standard Time to Daylight Savings Time). Complete times to known precision (e.g. YYYY-MM-DDThh). Use of "T" and either “Z” or “±” characters are required. <br><br> YYYY = 4-digit year, MM = 2-digit month, DD = 2-digit day of month, hh = 2-digit hour ranging from 00-23, mm = 2-digit minute, ss = 2-digit second.|
 
@@ -73,11 +80,21 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |term|`{measurement_column_name}`|
 |:----------------------------------------------------|:----------------------------------------------------|
 |requirement|required|
-|format|text; only UTF-8 characters are permitted|
+|format|text; only letters, numbers, underscores, and hyphens in the UTF-8 character set are permitted|
 |unit|N/A|
 |definition|User-defined measurement column name. Strongly recommend to use only letters, numbers, underscores, and hyphens.|
 |example|temp_soil_2|
 |additional guidance|`{measurement_column_name}` is considered arbitrary. They are not parsed for information on type of variable, unit, statistic, or temporal representation. Each `{measurement_column_name}` must be defined in the data dictionary file using the required fields that include `measured_variable` and `unit`. Optional fields, such as `statistic_*`, `representation_temporal`, and `unit_basis`, should be used to fully describe the measurement characteristics. |
+
+### {measurement_column_name}_flag
+|term|`{measurement_column_name}_flag`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|text; only UTF-8 characters are permitted|
+|unit|N/A|
+|definition|User-defined identifier that indicates a flag for the individual measurement in the corresponding `measurement_column_name`, often used for data quality flags. Strongly recommend to use only letters, numbers, underscores, and hyphens.|
+|example|temp_soil_2_flag|
+|additional guidance|Column header for associated `{measurement_column_name}` will be appended with “_flag” for a flag column. If abbreviated/coded flags are used, we strongly recommend that these are defined within the required methods file.|
 
 ### latitude
 |term|`latitude`|
@@ -157,7 +174,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |unit|N/A|
 |definition|User-defined identifier that indicates what treatment was used for manipulation experiments, if applicable. Strongly recommended that only letters, numbers, hyphens, and underscores are used.|
 |example|treatment_wet_01|
-|additional guidance|Treatment IDs should be defined within the methods and attributes file. <br><br> It is recommended that if there is no treatment but the column is present, the `treatment_id` should be “N/A”. It is recommended that if there is a control treatment, the `treatment_id` should be “control”.|
+|additional guidance|Treatment IDs should be defined in the methods text file. <br><br> It is recommended that if there is no treatment but the column is present, the `treatment_id` should be “N/A”. It is recommended that if there is a control treatment, the `treatment_id` should be “control”.|
 
 ### datetime_measured
 |term|`datetime_measured`|
@@ -168,16 +185,6 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |definition|Date and time of measurement, to known specificity.|
 |example|2026-03-12T13:50-06:00|
 |additional guidance|Dates must be reported in the ISO 8601:2019 standard (YYYY-MM-DD) and completed to known precision (e.g. YYYY-MM, YYYY). Times must be reported with a date in either Coordinated Universal Time (UTC) (YYYY-MM-DDThh:mm:ssZ) or Local Standard Time with the UTC offset (YYYY-MM-DDThh:mm±hh:mm). It is strongly recommended not to change UTC offset in the middle of a time series (i.e., do not switch from Standard Time to Daylight Savings Time). Complete times to known precision (e.g. YYYY-MM-DDThh). Use of "T" and either “Z” or “±” characters are required. <br><br> YYYY = 4-digit year, MM = 2-digit month, DD = 2-digit day of month, hh = 2-digit hour ranging from 00-23, mm = 2-digit minute, ss = 2-digit second.|
-
-### {measurement_column_name}_flag
-|term|`{measurement_column_name}_flag`|
-|:----------------------------------------------------|:----------------------------------------------------|
-|requirement|optional|
-|format|text; only UTF-8 characters are permitted|
-|unit|N/A|
-|definition|User-defined identifier that indicates a flag for the individual measurement in the corresponding measurement_column_name. Strongly recommend to use only letters, numbers, underscores, and hyphens.|
-|example|temp_soil_2_flag|
-|additional guidance|Column header for associated `{measurement_column_name}` will be appended with “_flag” for a flag column. If abbreviated/coded flags are used, we strongly recommend that these are defined within the required methods file.|
 
 ### notes
 |term|`notes`|
@@ -296,7 +303,7 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |unit|N/A|
 |definition|Unit of measurement.|
 |example|degree Celsius|
-|additional guidance|Insert "N/A" when units aren't applicable.|
+|additional guidance|Insert "N/A" when units aren't applicable. Insert “unitless” if the measurement is unitless or nondimensional. When a unit is a ratio of two of the same units (e.g., g/g), do not use “unitless”, use the actual units.|
 
 ### definition
 |term|`definition`|
@@ -316,6 +323,16 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |unit|N/A|
 |definition|The variable or property being measured. This field is only used for `{measurement_column_name}` column headers / rows.|
 |example|temperature|
+|additional guidance|N/A|
+
+### material_measured
+|term|`material_measured`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|[Controlled vocabulary](https://github.com/ess-dive-workspace/essdive-sample-data-lite/blob/release-v1.0.0/controlled_vocabulary.md#material_measured)|
+|unit|N/A|
+|definition|The material or medium in which the measurement was taken.|
+|example|air|
 |additional guidance|N/A|
 
 ### column_or_row_long_name
@@ -368,6 +385,16 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |example|mean|
 |additional guidance|A measurement statistic typically describes variation or uncertainty in the measurement. This can be obtained / reported by an instrument or calculated via replicates. Replicates include multiple measures on the same physical sample and/or samples collected at different locations and times that are not indistinguishable for the scientific purpose. Use the spatial and / or temporal statistical descriptions, if the variability is due to multiple scientifically important locations or time periods.|
 
+### statistic_measurement_number
+|term|`statistic_measurement_number`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|numeric|
+|unit|N/A|
+|definition|The number of observations used to calculate the `statistic_measurement`. The observations should scientifically-equivalent in space and time.|
+|example|5|
+|additional guidance|Use only with `{measurement_column_name}` rows that have `statistic_measurement` specified.|
+
 ### statistic_spatial
 |term|`statistic_spatial`|
 |:----------------------------------------------------|:----------------------------------------------------|
@@ -378,6 +405,16 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |example|mean|
 |additional guidance|The spatial statistic should be used to describe measurement values that are a combination of separate spatial locations.|
 
+### statistic_spatial_number
+|term|`statistic_spatial_number`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|numeric|
+|unit|N/A|
+|definition|The number of observations used to calculate the `statistic_spatial`.|
+|example|5|
+|additional guidance|Use only with `{measurement_column_name}` rows that have `statistic_spatial` specified.|
+
 ### statistic_temporal
 |term|`statistic_temporal`|
 |:----------------------------------------------------|:----------------------------------------------------|
@@ -387,6 +424,26 @@ A single asterisk (*) below marks terms that are required. Two asterisks (**) ma
 |definition|Statistic description, if applicable. This term is only used for `{measurement_column_name}` headers / rows if the measured value represents a combination of individual observations at different times to represent a larger time period. In most cases, a corresponding representation_temporal should be specified.|
 |example|mean|
 |additional guidance|The temporal statistic should be used when the measurement value is a combination of individual measurements made at separate times.|
+
+### statistic_temporal_number
+|term|`statistic_temporal_number`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|numeric|
+|unit|N/A|
+|definition|The number of observations used to calculate the `statistic_temporal`.|
+|example|5|
+|additional guidance|Use only with `{measurement_column_name}` rows that have `statistic_temporal` specified.|
+
+### statistic_detail
+|term|`statistic_detail`|
+|:----------------------------------------------------|:----------------------------------------------------|
+|requirement|optional|
+|format|free text|
+|unit|N/A|
+|definition|Additional details for interpretation of the `stastic_*` terms.|
+|example|statistic_measurement is mean of 5 biological replicates|
+|additional guidance|If the `statistic_measurement` is used, it is recommended to add details describing whether physical replicates, or repeat measurements of the same entity, or other approaches were used. Additional details may include information about how the statistic was calculated.|
 
 ### representation_temporal
 |term|`representation_temporal`|
