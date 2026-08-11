@@ -38,7 +38,7 @@
        - `common_flag`
        - `{measurement_column_name}_flag`
        - `notes`
-- Include as many measurement columns as desired. Each `{measurement_column_name}` must be defined in the data dictionary using the RF-specified fields.
+- Include as many measurement columns as desired. Each `{measurement_column_name}` must be defined in the data dictionary using the RF-specified terms.
 - If multiple flags are provided in a single cell, they should be separated by a semicolon and space.
 - Flags and treatments should be defined in the Methods File.
 - If data files contain time series measurements on a single sample, each file can only contain a time series for one sample. The column required for a time series (`time_elapsed`) cannot have repeated values.
@@ -96,7 +96,7 @@
           - `column_or_or_name_position`
           - `notes`
 - The data and methods and attributes files listed in the FLMD should have “ESS-DIVE Sample Data - Lite Reporting Format v1” listed in the `standard` column.
-- If you include the optional fields `data_orientation`, `header_rows`, or `column_or_row_name_position`, the reported values should be “horizontal”, “1”, and “1”, respectively, for the files following this RF.
+- If you include the optional terms `data_orientation`, `header_rows`, or `column_or_row_name_position`, the reported values should be “horizontal”, “1”, and “1”, respectively, for the files following this RF.
 
 ## ADDITIONAL CONSIDERATIONS
 - You are encouraged to include raw data files, instrument specification PDFs from manufacturers, code used for data collection or data processing, and/or links to relevant content (i.e., GitHub, Zenodo). The RF does not provide specific guidance on formats of these additional files.
