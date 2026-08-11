@@ -12,8 +12,8 @@ The ESS-DIVE Sample Data - Lite Reporting Format controlled vocabularies for app
 - [measured_variable](#measured_variable)
 - [material_measured](#material_measured)
 - [data_type](#data_type)
-- [statistic](#statistic)
 - [representation_temporal](#representation_temporal)
+- [statistic](#statistic)
 
 ---
 ## Data File
@@ -112,6 +112,22 @@ The controlled vocabulary for the `material_measured` term is based on the [ODM2
 |date|
 |datetime|
 
+### representation_temporal
+|Controlled Vocabulary|
+|:-----------------------------------------------------------------|
+|year|
+|month|
+|day|
+|2-hour|
+|hour|
+|30-minute|
+|15-minute|
+|5-minute|
+|minute|
+|second|
+|hertz|
+|other|
+
 ### statistic
 |Controlled Vocabulary|Definition|
 |:-------------------------------------------------------------------------------|:----------------------------------------------------|
@@ -128,19 +144,3 @@ The controlled vocabulary for the `material_measured` term is based on the [ODM2
 | p-value | ISO 3534:2006-1 p-value: probability of observing the observed test statistic value or any other value at least as unfavourable to the null hypothesis |
 | CV | ISO 3534:2006-1 sample coefficient of variation: sample standard deviation divided by the sample mean |
 | covariance | ISO 3534:2006-1 sample covariance: sum of products of deviations of pairs of random variables in a random sample from their sample means divided by the number of terms in the sum minus one |
-
-### representation_temporal
-|Controlled Vocabulary|
-|:-----------------------------------------------------------------|
-|year|
-|month|
-|day|
-|2-hour|
-|hour|
-|30-minute|
-|15-minute|
-|5-minute|
-|minute|
-|second|
-|hertz|
-|other|
