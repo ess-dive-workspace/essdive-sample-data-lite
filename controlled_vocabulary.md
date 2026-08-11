@@ -18,6 +18,7 @@ The ESS-DIVE Sample Data - Lite Reporting Format controlled vocabularies for app
 ---
 ## Data File
 ### material_collected
+The controlled vocabulary for the `material_collected` term is based on the [SESAR's material controlled vocabulary](https://www.geosamples.org/vocabularies/material).
 |Controlled Vocabulary|
 |:-----------------------------------------------------------------|
 |Gas|
@@ -45,7 +46,7 @@ The ESS-DIVE Sample Data - Lite Reporting Format controlled vocabularies for app
 | water_surface | surface of a water body (e.g., lake, river, stream) |
 | mean_sea_level | mean sea level |
 | unknown | The vertical position reference is unknown. |
-| other | The vertical position reference is known, but not in the predefined list. Provide the known vertical position reference in the notes field. |
+| other | The vertical position reference is known, but not in the predefined list. Provide the known vertical position reference in the notes term. |
 
 ---
 ## Data Dictionary File
@@ -76,9 +77,10 @@ The controlled vocabulary for the unit is based on the [Unified Code of Unified 
 |feet (international)|[ft_i]|
 
 ### measured_variable
-Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) "Term" column for the `measured_variable` field. CUAHSI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
+Use the Consortium of Universities for the Advancement of Hydrologic Science (CUAHSI) [Variable Name controlled vocabulary](https://his.cuahsi.org/mastercvreg/edit_cv11.aspx?tbl=VariableNameCV&id=1157579162) "Term" column for the `measured_variable` term. CUAHSI's controlled vocabulary is based upon [ODM2's variable name controlled vocabulary](http://vocabulary.odm2.org/variablename/). 
 
 ### material_measured
+The controlled vocabulary for the `material_measured` term is based on the [ODM2's medium controlled vocabulary](http://vocabulary.odm2.org/medium/).
 |Controlled Vocabulary|Definition|
 |:-------------------------------------------------------------------------------|:----------------------------------------------------|
 | air | Specimen collection of ambient air or sensor emplaced to measure properties of ambient air. |
