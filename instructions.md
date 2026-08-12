@@ -52,7 +52,7 @@
 ### DATA DICTIONARY FILES
 - **Purpose:** lists and describes `column_or_row_name` to provide metadata for each column header.
 - **Format:** comma-separated value (.csv)
-- **Governed by:** File Level Metadata (FLMD) Reporting Format available at https://github.com/ess-dive-workspace/essdive-file-level-metadata, with required modifications detailed in this Sample Data - Lite Reporting Format (see details below).
+- **Governed by:** [File Level Metadata (FLMD) Reporting Format](https://github.com/ess-dive-workspace/essdive-file-level-metadata) with required modifications detailed in this Sample Data - Lite Reporting Format (see details below).
 - Use the Sample Data - Lite Reporting Format template to structure data dictionary (DD) files. Name the file “`dd.csv`” or with the suffix “`_dd.csv`”. The term guide has term descriptions and requirements. _Extension (new) or modified terms that build on the dd structure governed by the FLMD Reporting Format are marked with a plus below._
     - Required terms include:
         - `column_or_row_name`
@@ -82,7 +82,7 @@
 ### FILE LEVEL METADATA FILE
 - **Purpose:** lists and describes `file_name` to provide metadata for each file.
 - **Format:** comma-separated value (.csv)
-- **Governed by:** FLMD Reporting Format available at https://github.com/ess-dive-workspace/essdive-file-level-metadata, with required modifications detailed in this Sample Data - Lite Reporting Format (see details below).
+- **Governed by:** [File Level Metadata (FLMD) Reporting Format](https://github.com/ess-dive-workspace/essdive-file-level-metadata) with required modifications detailed in this Sample Data - Lite Reporting Format (see details below).
 - Use the Sample Data - Lite Reporting Format template to structure FLMD files. Name the file “`flmd.csv`” or with the suffix “`_flmd.csv`”. The term guide has term descriptions and requirements. _Extension (new) or modified terms that build on the FLMD structure governed by the FLMD Reporting Format are marked with a plus below._ 
      - Required terms include:
           - `file_name`
